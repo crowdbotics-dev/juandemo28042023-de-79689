@@ -3,18 +3,21 @@ import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
 const Untitled1 = () => {
   return <SafeAreaView style={styles.safeArea}>
-        <ScrollView contentContainerStyle={{
-      backgroundColor: '#f0f0f1',
+      <ScrollView contentContainerStyle={{
+      backgroundColor: "#fff0f1",
       padding: 10,
-      position: 'relative',
+      position: "relative",
       flex: 1
-    }}></ScrollView>
+    }}>
+        Hello world!
+      </ScrollView>
+      This is a new Screen!
     </SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
   safeArea: {
-    height: '100%'
+    height: "100%"
   }
 });
 export default Untitled1;
