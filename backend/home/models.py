@@ -6,8 +6,12 @@ class Ewallet(models.Model):
     btc_amount = models.BigIntegerField()
     eth_amount = models.BigIntegerField()
     passwd = models.CharField(max_length=256,)
-    transactions = models.ForeignKey("home.Transactions",on_delete=models.CASCADE,null=True,blank=True,related_name="ewallet_transactions",)
+    transactions = models.ForeignKey("home.Transactions",null=True,blank=True,on_delete=models.CASCADE,related_name="ewallet_transactions",)
 class Transactions(models.Model):
     'Generated Model'
     to = models.ForeignKey("users.User",on_delete=models.CASCADE,related_name="transactions_to",)
     uuid = models.UUIDField()
+class EBank(models.Model):
+    'Generated Model'
+    name = models.CharField(max_length=256,)
+    trusted = models.BooleanField()
