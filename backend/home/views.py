@@ -1,4 +1,4 @@
-from .models import Ewallet, Transactions
+from .models import Ewallet, Transactions, EBank
 from django.views.generic import CreateView, UpdateView, DetailView, ListView
 from django.shortcuts import render
 

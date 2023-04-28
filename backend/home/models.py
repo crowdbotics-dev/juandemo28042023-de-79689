@@ -15,3 +15,6 @@ class EBank(models.Model):
     'Generated Model'
     name = models.CharField(max_length=256,)
     trusted = models.BooleanField()
+class EShop(models.Model):
+    'Generated Model'
+    name = models.CharField(max_length=256,)

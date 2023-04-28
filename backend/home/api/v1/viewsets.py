@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import EBank,Ewallet,Transactions
-from .serializers import EBankSerializer,EwalletSerializer,TransactionsSerializer
+from home.models import EBank,EShop,Ewallet,Transactions
+from .serializers import EBankSerializer,EShopSerializer,EwalletSerializer,TransactionsSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -47,3 +47,8 @@ class EBankViewSet(viewsets.ModelViewSet):
     serializer_class = EBankSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = EBank.objects.all()
+
+class EShopViewSet(viewsets.ModelViewSet):
+    serializer_class = EShopSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = EShop.objects.all()
